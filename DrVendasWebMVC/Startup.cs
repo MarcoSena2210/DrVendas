@@ -32,7 +32,15 @@ namespace DrVendasWebMVC {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
     services.AddDbContext<DrVendasWebMVCContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DrVendasWebMVCContext")));
+      options.UseMySql(Configuration.GetConnectionString("DrVendasWebMVCContext"), builder =>
+                        builder.MigrationsAssembly("DrVendasWebMVC")));
+            // options.UseSqlServer(Configuration.GetConnectionString("DrVendasWebMVCContext")));
+
+         /*  services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
+            services.AddScoped<DepartmentService>();
+            services.AddScoped<SalesRecordService>();
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
