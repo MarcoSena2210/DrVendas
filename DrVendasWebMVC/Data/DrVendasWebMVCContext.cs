@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace DrVendasWebMVC.Models
 {
@@ -13,6 +9,9 @@ namespace DrVendasWebMVC.Models
         {
         }
 
-        public DbSet<DrVendasWebMVC.Models.Departamento> Departamento { get; set; }
+        public DbSet<Departamento> Departamento { get; set; }
+        public DbSet<Venda> Venda { get; set; }
+        public DbSet<Vendedor> Vendedor { get; set; }
+   
     }
 }
