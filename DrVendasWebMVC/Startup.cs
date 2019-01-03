@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using DrVendasWebMVC.Models;
 using DrVendasWebMVC.Data;
+using DrVendasWebMVC.Services;
 
 namespace DrVendasWebMVC {
     public class Startup {
@@ -39,8 +40,8 @@ namespace DrVendasWebMVC {
                  
             //Adicionando os Serviços
              services.AddScoped<SeedingService>();
-            /*    services.AddScoped<SellerService>();
-              services.AddScoped<DepartmentService>();
+             services.AddScoped<VendedorService>();
+            /*     services.AddScoped<DepartmentService>();
               services.AddScoped<SalesRecordService>();
               */
         }
