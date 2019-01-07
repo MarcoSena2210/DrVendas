@@ -41,8 +41,8 @@ namespace DrVendasWebMVC {
             //Adicionando os Serviços
              services.AddScoped<SeedingService>();
              services.AddScoped<VendedorService>();
-            /*     services.AddScoped<DepartmentService>();
-              services.AddScoped<SalesRecordService>();
+             services.AddScoped<DepartamentoService>();
+            /*      services.AddScoped<SalesRecordService>();
               */
         }
 

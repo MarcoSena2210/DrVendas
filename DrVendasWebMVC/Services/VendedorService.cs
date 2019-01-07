@@ -18,8 +18,7 @@ namespace DrVendasWebMVC.Services
             return _context.Vendedor.ToList();
         }
         public void Insert(Vendedor obj) {
-            obj.Departamento = _context.Departamento.First(); //temporiamente
-            _context.Add(obj);
+             _context.Add(obj);
             _context.SaveChanges();
         }
     }
