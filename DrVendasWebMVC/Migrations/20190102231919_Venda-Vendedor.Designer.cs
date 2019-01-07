@@ -56,7 +56,7 @@ namespace DrVendasWebMVC.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<DateTime>("DataAniversario");
+                    b.Property<DateTime>("DataNascimento");
 
                     b.Property<int?>("DepartamentoId");
 

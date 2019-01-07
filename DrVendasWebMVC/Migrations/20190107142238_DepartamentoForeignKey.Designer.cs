@@ -3,14 +3,16 @@ using System;
 using DrVendasWebMVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DrVendasWebMVC.Migrations
 {
     [DbContext(typeof(DrVendasWebMVCContext))]
-    partial class DrVendasWebMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20190107142238_DepartamentoForeignKey")]
+    partial class DepartamentoForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

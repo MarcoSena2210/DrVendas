@@ -10,13 +10,13 @@ namespace DrVendasWebMVC.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        public DateTime DataAniversario { get; set; }
+        public DateTime DataNascimento { get; set; }
         public Double SalarioBase { get; set; }
 
         //Um vendedor pertence a um departamento 
         //Dessa forma estalecemos um relacionamento um para um
         public Departamento Departamento { get; set; }
-
+        public int DepartamentoId { get; set; }
         //Um vendedor pode ter varias vendas 
         //Dessa forma estalecemos um relacionamento um para varios e já instancimaos
         public ICollection<Venda> Vendas { get; set; } = new List<Venda>();
@@ -25,12 +25,12 @@ namespace DrVendasWebMVC.Models
         { }
 
         //Nao entra a collection de vendas 
-        public Vendedor(int id, string nome, string email, DateTime dataAniversario, double salarioBase, Departamento departamento)
+        public Vendedor(int id, string nome, string email, DateTime dataNascimento, double salarioBase, Departamento departamento)
         {
             Id = id;
             Nome = nome;
             Email = email;
-            DataAniversario = dataAniversario;
+            DataNascimento = dataNascimento;
             SalarioBase = salarioBase;
             Departamento = departamento;
         }
