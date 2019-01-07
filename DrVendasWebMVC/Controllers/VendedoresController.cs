@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DrVendasWebMVC.Models;
 using DrVendasWebMVC.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,5 +18,17 @@ namespace DrVendasWebMVC.Controllers
             var list = _vendedorService.BuscaTodosVendedores();
              return View(list);
         }
+
+        public IActionResult Create() {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Vendedor vendedor)
+        {
+            _vendedorService.Insert(vendedor);
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
